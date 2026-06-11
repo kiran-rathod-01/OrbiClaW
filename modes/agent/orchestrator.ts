@@ -3,7 +3,7 @@ import chalk from "chalk";
 import { defaultAgentConfig } from "./types.ts"
 import { types } from "node:util";
 import { ActionTracker } from "./action-tracker.ts";
-import { ToolExecutor } from "./tool-executor.ts";
+ import { ToolExecutor } from "./tool-executor.ts";
  
 
 export async function runAgentMode() {
@@ -20,5 +20,6 @@ export async function runAgentMode() {
     const config = defaultAgentConfig()
     const tracker = new ActionTracker();
     const executor = new ToolExecutor(tracker,config)
+    const tools = createAgentTools(executor)
 
 }
