@@ -4,7 +4,7 @@ export type ActionType = //AI what shoud be can do in my system (acesses to my a
     | 'file_delete'
     | 'folder_create'
     | 'code_analysis'
-    | 'tool execute';
+    | 'tool_execute';
 
     // status of work
 export type ActionStatus = 'pending' | 'executed' | 'approved' | 'rejected';
@@ -67,6 +67,6 @@ export function isMutationType(t: ActionType): boolean {
         t === 'file_modify'   ||
         t === 'file_delete'   ||
         t === 'folder_create' ||
-        t === 'tool execute'
+        t === 'tool_execute'
     );
 }
