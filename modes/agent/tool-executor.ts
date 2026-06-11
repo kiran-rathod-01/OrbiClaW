@@ -108,7 +108,7 @@ export class ToolExecutor {//its a Bridge between youer AI tool and the real fil
 
         const st = fs.statSync(abs);
         if (st.size > this.config.maxFileSizeToRead){
-            throw new Error(`File too large: ${rel}`):
+            throw new Error(`File too large: ${rel}`);
         }
 
         const text = fs.readFileSync(abs, "utf8");
@@ -505,6 +505,6 @@ export class ToolExecutor {//its a Bridge between youer AI tool and the real fil
         return { errors };
     }
 
-     
+    //next stage
 
 }
