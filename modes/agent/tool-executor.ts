@@ -505,6 +505,10 @@ export class ToolExecutor {//its a Bridge between youer AI tool and the real fil
         return { errors };
     }
 
+     clearStaging():void{
+        this.overlay.clear()
+        this.deleted.clear()
+     }
     //next stage
 
 }

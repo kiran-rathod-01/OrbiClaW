@@ -1,5 +1,6 @@
 import chalk, { colors } from "chalk"
 import { select , isCancel } from "@clack/prompts";
+import {runAgentMode} from "./agent/orchestrator"
 // import { runWakeup } from "./tui/wakeup";
 
 export  async function runCliMode() {
@@ -19,7 +20,7 @@ export  async function runCliMode() {
         }
 
         if(mode==="agent"){
-            console.log("agent mode on ...")
+           await runAgentMode(); 
         }
 
         if(mode==="plan"){
