@@ -75,7 +75,7 @@ function asMd(question: string, answer: string): string {
 }
 
 
-export async function runAskMode(){
+export async function runAskMode(){ 
     console.log("\n❓ Ask Mode\n");
     const question = await text({message:"What do you want to ask?"});
     if(isCancel(question) || !question.trim())return;
