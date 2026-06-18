@@ -8,6 +8,7 @@ import { defaultAgentConfig } from "../agent/types.ts";
 import { getAgentMode } from "../../ai/ai.config.ts";
 import { renderTerminalMarkdown } from "../../tui/terminal-md";
 import { runApprovalFlow } from "../agent/approval.ts";
+import { createWebTools } from "../plan/web-tool.ts";
 
 function createAskTool(executor:ToolExecutor){
     return {
@@ -89,11 +90,12 @@ export async function runAskMode(){
     const tracker = new ActionTracker();
     const executor = new ToolExecutor(tracker,config);
 
-    // TODO : web-searching tool (firecrewl js library for website serching)
+    //  web-searching tool (firecrewl js library for website serching)
 
 
     const tools = {
         ...createAskTool(executor),
+        ...createWebTools(tracker)
     };
 
     const agent = new ToolLoopAgent({
