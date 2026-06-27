@@ -13,7 +13,6 @@
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Bun](https://img.shields.io/badge/Runtime-Bun-fbf0df?style=flat-square&logo=bun&logoColor=black)](https://bun.sh)
-[![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)](LICENSE)
 [![OpenRouter](https://img.shields.io/badge/LLM-OpenRouter-6C47FF?style=flat-square)](https://openrouter.ai)
 [![Telegraf](https://img.shields.io/badge/Telegram-Telegraf-26A5E4?style=flat-square&logo=telegram&logoColor=white)](https://telegraf.js.org)
 
@@ -29,14 +28,10 @@
 
 ```
 $ bun run index.ts wakeup
-```
+
  ██████╗ ██████╗ ██████╗ ██╗ ██████╗██╗      █████╗ ██╗    ██╗
 ██╔═══██╗██╔══██╗██╔══██╗██║██╔════╝██║     ██╔══██╗██║    ██║
-██║   ██║██████╔╝██████╔╝██║██║     ██║     ███████║██║ █╗ ██║
-██║   ██║██╔══██╗██╔══██╗██║██║     ██║     ██╔══██║██║███╗██║
-╚██████╔╝██║  ██║██████╔╝██║╚██████╗███████╗██║  ██║╚███╔███╔╝
- ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝ ╚═════╝╚══════╝╚═╝  ╚═╝ ╚══╝╚══╝
-```
+  ...
 
 ◆ Which mode you want to proceed with?
   ● CLI
