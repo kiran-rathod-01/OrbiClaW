@@ -3,7 +3,7 @@ import { register } from "node:module";
 import { Telegraf } from "telegraf";
 import { WELCOME } from "./constants";
 import { registerHandlers } from "./handlers";
-// import { select , isCancel } from "@clack/prompts";
+import { select , isCancel } from "@clack/prompts";
 
 export async function runTelegramMode() {
     // when we are accese so i need Two thinks 
@@ -31,7 +31,5 @@ export async function runTelegramMode() {
         process.once("SIGINT", stop);
         process.once("SIGTERM", stop);
     });
-
-
 
 }
