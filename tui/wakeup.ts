@@ -54,8 +54,8 @@ export async function runWakeup() {
         if(mode === "cli"){
             await runCliMode();
         } 
-
-        if(mode === "telegram"){
+        else if(mode === "telegram"){
             await runTelegramMode();
         }
+
 }

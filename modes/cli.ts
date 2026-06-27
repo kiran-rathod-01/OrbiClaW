@@ -1,6 +1,9 @@
 import chalk, { colors } from "chalk"
 import { select , isCancel } from "@clack/prompts";
+import {runAgentMode} from "./agent/orchestrator"
+import { runAskMode } from "./ask/orchestrator";
 // import { runWakeup } from "./tui/wakeup";
+import { runPlanMode } from "./plan/orchestrator";
 
 export  async function runCliMode() {
     while(true){
@@ -19,15 +22,15 @@ export  async function runCliMode() {
         }
 
         if(mode==="agent"){
-            console.log("agent mode on ...")
+           await runAgentMode(); 
         }
 
         if(mode==="plan"){
-            console.log("plan mode on ...")
+            await runPlanMode();
         }
         
         if(mode==="ask"){
-            console.log("ask mode on ...")
+            await runAskMode();
         } 
 
         if(mode !== "agent" && mode !== "ask" && mode !=="plan"){
